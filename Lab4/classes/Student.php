@@ -43,11 +43,9 @@ class Student extends Human {
         echo "Студент поступив!<br>";
     }
 
-    public function cleanRoom() {
-        echo "Студент прибирає кімнату.<br>";
+    public function getClassName() {
+        return 'Студент';
     }
 
-    public function cleanKitchen() {
-        echo "Студент прибирає кухню.<br>";
-    }
+   
 }

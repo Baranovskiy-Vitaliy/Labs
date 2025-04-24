@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- index.html -->
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація користувача</title>
+    <script src="script.js?v=2" defer></script>
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <p id="message"></p>
+    <p id="test"></p>
+    <h2>Форма реєстрації</h2>
+    <form id="formInsert" onsubmit="submitFormInsert(event)">
+        <table>
+            <tr>
+                <td><label for="name">Ім'я:</label></td>
+                <td><input type="text" id="name" name="name" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Електронна адреса:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Пароль:</label></td>
+                <td><input type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Зареєструватися</button></td>
+            </tr>
+        </table>
+    </form>
+    
+    <form id="formLogin" onsubmit="submitFormLogin(event)">
+        <h2>Форма входу</h2>
+        <table>
+            <tr>
+                <td><label>Електронна адреса:</label></td>
+                <td><input type="email" id="loginEmail" name="loginEmail" required></td>
+            </tr>
+            <tr>
+                <td><label>Пароль:</label></td>
+                <td><input type="password" id="loginPassword" name="loginPassword" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit" id="log">Увійти</button></td>
+            </tr>
+        </table>
+        </form>
+        <button type="submit" id="exit" style="display: none;">Вийти</button>
+        <button id="deleteUser" style="display: none;">Видалити даний обліковий запис</button>
+
+        <button id="getAllUsers">Отримати всіх користувачів</button>
+        <table id ="userTable" >
+            <thead>
+            <tr>
+                <th>Ім'я</th>
+                <th>Електронна адреса</th>
+            </tr>
+        </thead>
+            <tbody id="userTableBody" class="userTable">
+                <!-- Тут повинні відображатися користувачі -->
+            </tbody>
+        </table>
+
+</body>
+</html>

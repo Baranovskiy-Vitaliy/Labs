@@ -33,11 +33,7 @@ class Programmer extends Human {
         echo "Програміст народився.<br>";
     }
 
-    public function cleanRoom() {
-        echo "Програміст прибирає кімнату.<br>";
-    }
-
-    public function cleanKitchen() {
-        echo "Програміст прибирає кухню.<br>";
+    public function getClassName() {
+        return 'Програміст';
     }
 }

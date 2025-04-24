@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- index.html -->
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація користувача</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p id="message"></p>
+    <p id="test"></p>
+    <h2>Реалізація заміток</h2>
+    <p id="message"></p>
+    <form id="formInsert" onsubmit="submitFormInsert(event)">
+        <table>
+            <tr>
+                <td><label>Заголовок:</label></td>
+                <td><input type="text" id="title" required></td>
+            </tr>
+            <tr>
+                <td><label>Замітка:</label></td>
+                <td><input type="text" id="note" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Зберегти</button></td>
+            </tr>
+        </table>
+    </form>
+    
+    <form id="formDelite" onsubmit="submitFormDelete(event)">
+        
+        <table>
+            <tr>
+                <td><label>Видалити запис за id:</label></td>
+                <td><input type="number" id="idNote" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit" id="delete">Видалити запис</button></td>
+            </tr>
+        </table>
+        </form>
+
+        <button id="getAllNotes">Отримати всіх записи</button>
+        <table id ="noteTable" >
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>Заголовок</th>
+                <th>Замітки</th>
+            </tr>
+        </thead>
+            <tbody id="noteTableBody" class="noteTable">
+                <!-- Тут повинні відображатися коментарі -->
+            </tbody>
+        </table>
+
+</body>
+</html>

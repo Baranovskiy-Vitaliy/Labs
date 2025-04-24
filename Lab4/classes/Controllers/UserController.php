@@ -9,6 +9,9 @@ use Models\UserModel;
  */
 
 class UserController {
+    /**
+         * Виводить повідомлення з міткою даного класу
+         */
     public function showMessage() {
         $model = new UserModel();
         echo $model->getMessage('Controller');

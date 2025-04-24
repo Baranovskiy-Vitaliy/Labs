@@ -1,7 +1,12 @@
 <?php
 
+interface HouseCleaning {
+    public function cleanRoom();  
+    public function cleanKitchen();  
+}
 
-abstract class Human {
+
+abstract class Human implements HouseCleaning {
     protected string $name;
     protected int $age;
 
@@ -26,8 +31,18 @@ abstract class Human {
         $this->age = $age;
     }
 
+    
     abstract protected function birthMessage();
     public function birth() {
         $this->birthMessage();
+    }
+
+
+    public function cleanRoom() {
+        echo $this->getClassName() . " прибирає прибирає кімнату<br>";
+    }
+
+    public function cleanKitchen() {
+        echo $this->getClassName() . " прибирає прибирає кухню<br>";
     }
 }

@@ -1,17 +1,14 @@
 <?php
 
-//use Models\Circle;
-//indexlab4.php
 
 require_once 'autoload.php';
-//require_once 'classes/Views/Views.php';
 
 
 
 echo "<h1>Завдання 1, 2, 3, 4, 5</h1>";
 
 $views = new Views\UserView();
-$views->render('yспішно підключений.');
+$views->message('yспішно підключений.');
 
 $models = new Models\UserModel();
 echo $models->getMessage();
@@ -31,7 +28,7 @@ $circle2->setX(2);
 $circle2->setY(2);
 $circle2->setRadius(5);
 
-echo 'Друге ' . $circle2->__toString() . '<br>';
+echo 'Друге ' . $circle2 . '<br>';
 
 
 echo '<h1>Завдання 6</h1>';
@@ -44,20 +41,18 @@ else
 
 echo '<h1>Завдання 7</h1>';
 
-$text = new Text();
 
-$text -> clearFile('text1');
-$text -> clearFile('text2');
-$text -> clearFile('text3');
+Text::clearFile('text1');
+Text::clearFile('text2');
+Text::clearFile('text3');
 
+Text::writeFile('text1', 'Текст для з файлу text1');
+Text::writeFile('text2', 'Текст для з файлу text2');
+Text::writeFile('text3', 'Текст для з файлу text3');
 
-$text->writeFile('text1', 'Текст для з файлу text1');
-$text->writeFile('text2', 'Текст для з файлу text2');
-$text->writeFile('text3', 'Текст для з файлу text3');
-
-echo $text->readFile('text1') . "<br>";
-echo $text->readFile('text2') . "<br>";
-echo $text->readFile('text3') . "<br>";
+echo Text::readFile('text1') . "<br>";
+echo Text::readFile('text2') . "<br>";
+echo Text::readFile('text3') . "<br>";
 
 echo "<h1>Завдання 8, 9, 10</h1><br>";
 

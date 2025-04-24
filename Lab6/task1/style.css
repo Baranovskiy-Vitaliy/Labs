@@ -1,0 +1,12 @@
+
+
+#userTable {
+    width: 100%;
+    border-collapse: collapse;
+    display: none;
+}
+#userTable th, #userTable td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid black;
+}

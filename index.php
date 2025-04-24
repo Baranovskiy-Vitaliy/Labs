@@ -21,10 +21,9 @@ session_destroy();
     <a href="Lab2\indexLab2.php">Лабораторна робота №2</a><br>
     <a href="Lab3/index3.php">Лабораторна робота №3</a><br>
     <a href="Lab4/indexLab4.php">Лабораторна робота №4</a><br>
-
-    <!-- <form method="post">
-        <input type="submit" value="Очистити сесію">
-    </form> -->
+    <a href="Lab5/indexLab5.php">Лабораторна робота №5</a><br>
+    <a href="Lab6/index.php">Лабораторна робота №6</a><br>
+    <a href="Lab7/indexLab7.php">Лабораторна робота №7</a><br>
     
 
     

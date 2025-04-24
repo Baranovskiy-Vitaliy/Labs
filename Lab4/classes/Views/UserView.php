@@ -1,14 +1,14 @@
 <?php
-// Views.php
+
 namespace Views;
 /**
  * Просто клас UserView
  */
 class UserView {
     /**
-         * Виводить повідомлення з міткою даного класу
+         * Виводить задане повідомлення з міткою даного класу
          */
-    public function render($message) {
+    public function message ($message) {
         
         echo "View: $message <br>";
     }
